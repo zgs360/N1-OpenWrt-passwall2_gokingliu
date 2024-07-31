@@ -1,5 +1,5 @@
 config system
-	option hostname 'OpenWrt'
+	option hostname 'N1'
 	option ttylogin '0'
 	option log_size '64'
 	option urandom_seed '0'

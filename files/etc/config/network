@@ -5,9 +5,6 @@ config interface 'loopback'
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
 
-config globals 'globals'
-	option ula_prefix 'fd6a:97ba:f3fe::/48'
-
 config interface 'lan'
 	option ifname 'eth0'
 	option proto 'static'
@@ -17,3 +14,15 @@ config interface 'lan'
 	option dns '192.168.5.1'
 	option delegate '0'
 
+config interface 'docker'
+	option device 'docker0'
+	option proto 'none'
+	option auto '0'
+
+config device
+	option type 'bridge'
+	option name 'docker0'
+
+config globals 'globals'
+	option packet_steering '1'
+	option ula_prefix 'fd6a:97ba:f3fe::/48'

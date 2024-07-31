@@ -2,8 +2,8 @@
 config defaults
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option fullcone '2'
 	option forward 'ACCEPT'
+	option fullcone '0'
 
 config zone
 	option name 'lan'
@@ -12,6 +12,30 @@ config zone
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
 
+config zone 'docker'
+	option name 'docker'
+	list network 'docker'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'ACCEPT'
+
 config include
 	option path '/etc/firewall.user'
 
+config include 'passwall2'
+    option type 'script'
+    option path '/var/etc/passwall2.include'
+    option reload '1'
+
+config include 'passwall2_server'
+    option type 'script'
+    option path '/var/etc/passwall2_server.include'
+    option reload '1'
+
+config rule
+	option name 'Allow-Ping'
+	option src 'lan'
+	option proto 'icmp'
+	option icmp_type 'echo-request'
+	option family 'ipv4'
+	option target 'ACCEPT'
