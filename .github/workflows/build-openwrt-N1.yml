@@ -99,6 +99,7 @@ jobs:
       run: |
         cd openwrt
         ls package
+        echo ">>>>>>>>"
         ls package/lean
         make defconfig
         make download -j8
