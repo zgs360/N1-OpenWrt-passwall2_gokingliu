@@ -14,7 +14,6 @@ wget -q -cP files/usr/share/v2ray https://github.com/Loyalsoldier/v2ray-rules-da
 git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
 
 # => passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git -b main package/passwall_package
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 # => 删除默认argon主题
