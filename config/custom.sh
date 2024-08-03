@@ -13,10 +13,10 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # => dockerman
-git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+git clone https://github.com/lisaac/luci-app-dockerman.git package/lean/luci-app-dockerman
 
 # => passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/lean/passwall2
 
 # => 删除默认argon主题
 rm -rf feeds/luci/themes/luci-theme-argon
