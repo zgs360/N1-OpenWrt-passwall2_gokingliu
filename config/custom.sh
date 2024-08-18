@@ -2,7 +2,7 @@
 sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.5.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.128.10.11/g' package/base-files/files/bin/config_generate
 
 # => geodata
 wget -q -cP files/usr/share/v2ray https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
